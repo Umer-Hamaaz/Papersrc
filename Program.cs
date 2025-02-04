@@ -54,6 +54,8 @@ namespace GrainOverlay
         private const int VK_SHIFT = 0x10;
 
         private IntPtr _hookID = IntPtr.Zero;
+        private LowLevelMouseProc _mouseProc; // Store the delegate to prevent garbage collection
+
         private delegate IntPtr LowLevelMouseProc(int nCode, IntPtr wParam, IntPtr lParam);
 
         [StructLayout(LayoutKind.Sequential)]
@@ -89,15 +91,15 @@ namespace GrainOverlay
             LoadImage();
             RegisterHotKey(this.Handle, HOTKEY_ID, MOD_CONTROL | MOD_SHIFT, VK_Q);
 
-            var proc = new LowLevelMouseProc(MouseHookCallback);
-            _hookID = SetHook(proc);
+            _mouseProc = new LowLevelMouseProc(MouseHookCallback); // Store the delegate
+            _hookID = SetHook(_mouseProc);
         }
 
         private IntPtr SetHook(LowLevelMouseProc proc)
         {
             using (Process curProcess = Process.GetCurrentProcess())
-            using (ProcessModule curModule = curProcess.MainModule)
             {
+                ProcessModule curModule = curProcess.MainModule;
                 return SetWindowsHookEx(WH_MOUSE_LL, proc, GetModuleHandle(curModule.ModuleName), 0);
             }
         }
