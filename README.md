@@ -102,7 +102,7 @@
 <h3><strong>How It Works</strong></h3>
 <ol start="1">
 <li>
-<p><strong>Install and Run:</strong></p>
+<p><strong>Unzip and Run Paperscr.exe:</strong></p>
 <ul>
 <li>
 <p>Download the application and run it on your Windows PC.</p>
@@ -143,5 +143,6 @@
 </li>
 </ul>
 <hr />
+<h3><strong>Download 👇</strong></h3>
 <p style="text-align: center;"><a title="Download" href="https://github.com/user-attachments/files/18650391/Papesrc_V1.zip" target="_blank" rel="noopener"><img src="https://i.imgur.com/Lziqoo4.png" width="150" height="150" /></a></p>
 <p>&nbsp;Create by <a href="https://www.facebook.com/umerhamaaz/" target="_blank" rel="noopener">Umer Hamaaz</a> (umer@hamaaz.com)</p>
