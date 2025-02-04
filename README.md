@@ -70,7 +70,7 @@
 </li>
 </ol>
 <hr />
-<h3><strong>Why Use GrainOverlay?</strong></h3>
+<h3><strong>Why Use PaperSrc?</strong></h3>
 <h4><strong>Based on Research:</strong></h4>
 <ul>
 <li>
